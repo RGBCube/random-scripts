@@ -23,7 +23,7 @@ let linked = ls ...(glob --no-dir $"($source)/**/*")
   | group-by hash | values
 
   $by_identity
-  | filter { ($in | length) > 1 }
+  | where { ($in | length) > 1 }
   | each {|entries|
     let separator = $"(ansi reset)\n- (ansi red)"
     print $"found identical files: \n- (ansi red)($entries | get name | str join $separator)(ansi reset)"
