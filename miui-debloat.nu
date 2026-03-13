@@ -139,6 +139,7 @@ const ids = [
   com.xiaomi.midrop
   com.xiaomi.mipicks
   com.xiaomi.mipicks
+  com.xiaomi.mipicks
   com.xiaomi.miplay_client
   com.xiaomi.miplay_client
   com.xiaomi.mirecycle
@@ -157,5 +158,9 @@ adb wait-for-device
 for id in $ids {
   print --no-newline $"trying to uninstall ($id)... "
 
-  try { adb shell pm uninstall --user 0 $id o+e>| print $in }
+  try {
+    adb shell pm uninstall --user 0 $id o+e>| print --no-newline $in
+  }
+
+  print ""
 }
