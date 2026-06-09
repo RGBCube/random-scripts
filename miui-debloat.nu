@@ -1,4 +1,5 @@
 #!/usr/bin/env nu
+# nativeBuildInputs = [ pkgs.android-tools ];
 
 const ids = [
   com.amazon.appmanager

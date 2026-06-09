@@ -3,5 +3,7 @@
 !.gitignore
 !LICENSE.md
 
+!*.lock
 !*.lua
+!*.nix
 !*.nu

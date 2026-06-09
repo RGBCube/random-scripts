@@ -1,4 +1,5 @@
 #!/usr/bin/env nu
+# nativeBuildInputs = [ pkgs.git ];
 
 def main [
   --org (-o): string = ""
